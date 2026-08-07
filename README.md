@@ -56,3 +56,25 @@ Hasil pelatihan menunjukkan bahwa model MobileNetV3 mampu mempelajari pola pada 
 ### Confusion Matrix
 
 ![Confusion Matrix](Training/matrix.png)
+
+## 🌐 Tampilan Aplikasi Web
+
+Aplikasi ini dikembangkan menggunakan **Flask** sebagai antarmuka berbasis web. Pengguna dapat mengunggah gambar daun cabai, kemudian sistem akan melakukan klasifikasi menggunakan model MobileNetV3 dan menampilkan hasil prediksi secara otomatis.
+
+### 1. Halaman Utama
+
+Halaman awal aplikasi yang menampilkan informasi singkat mengenai sistem serta tombol untuk memulai proses klasifikasi.
+
+![Halaman Utama](Web/tampilan%20utama.png)
+
+### 2. Halaman Upload Gambar
+
+Pengguna dapat mengunggah gambar daun cabai yang akan diproses oleh model.
+
+![Halaman Upload](Web/upload.png)
+
+### 3. Halaman Hasil Prediksi
+
+Setelah gambar diproses, sistem akan menampilkan hasil klasifikasi beserta tingkat kepercayaan (confidence).
+
+![Hasil Prediksi](Web/hasil.png)
