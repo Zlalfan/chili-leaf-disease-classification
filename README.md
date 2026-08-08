@@ -46,7 +46,7 @@ Model dilatih menggunakan TensorFlow dengan konfigurasi sebagai berikut.
 
 ## 📊 Hasil Pelatihan
 
-Pelatihan dilakukan menggunakan dua varian arsitektur MobileNetV3, yaitu **MobileNetV3-Small** dan **MobileNetV3-Large**. Hasil pelatihan dievaluasi menggunakan grafik akurasi, grafik loss, dan confusion matrix.
+Pelatihan dilakukan menggunakan dua varian arsitektur MobileNetV3, yaitu **MobileNetV3-Small** dan **MobileNetV3-Large**. Hasil pelatihan dievaluasi menggunakan grafik akurasi, grafik loss, dan confusion matrix untuk mengetahui kemampuan masing-masing model dalam mengklasifikasikan penyakit daun cabai.
 
 ### MobileNetV3-Small
 
@@ -77,6 +77,7 @@ Pelatihan dilakukan menggunakan dua varian arsitektur MobileNetV3, yaitu **Mobil
 #### Confusion Matrix
 
 ![Confusion Matrix MobileNetV3-Large](Training/larger/matrix.png)
+
 
 ## 🌐 Tampilan Aplikasi Web
 
