@@ -21,7 +21,6 @@ Dataset yang digunakan pada penelitian ini merupakan dataset citra daun cabai ya
 | Leaf Spot | Daun cabai yang mengalami penyakit bercak daun |
 | Yellowish Leaf | Daun cabai yang mengalami perubahan warna menjadi kekuningan |
 
-Datasetnya bisa diakses disini: https://app.roboflow.com/alfanz/daun-cabai-cz4fh/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true
 
 ## 🧠 Arsitektur Model
 
@@ -47,15 +46,37 @@ Model dilatih menggunakan TensorFlow dengan konfigurasi sebagai berikut.
 
 ## 📊 Hasil Pelatihan
 
-Hasil pelatihan menunjukkan bahwa model MobileNetV3 mampu mempelajari pola pada dataset dengan baik. Evaluasi dilakukan menggunakan grafik akurasi, grafik loss, serta confusion matrix.
+Pelatihan dilakukan menggunakan dua varian arsitektur MobileNetV3, yaitu **MobileNetV3-Small** dan **MobileNetV3-Large**. Hasil pelatihan dievaluasi menggunakan grafik akurasi, grafik loss, dan confusion matrix.
 
-### Hasil Training
+### MobileNetV3-Small
 
-![Training Results](Training/results.png)
+#### Grafik Akurasi
 
-### Confusion Matrix
+![Akurasi MobileNetV3-Small](Training/small/model_akurasi.png)
 
-![Confusion Matrix](Training/matrix.png)
+#### Grafik Loss
+
+![Loss MobileNetV3-Small](Training/small/model_loss.png)
+
+#### Confusion Matrix
+
+![Confusion Matrix MobileNetV3-Small](Training/small/matrix.png)
+
+---
+
+### MobileNetV3-Large
+
+#### Grafik Akurasi
+
+![Akurasi MobileNetV3-Large](Training/larger/model_akurasi.png)
+
+#### Grafik Loss
+
+![Loss MobileNetV3-Large](Training/larger/model_loss.png)
+
+#### Confusion Matrix
+
+![Confusion Matrix MobileNetV3-Large](Training/larger/matrix.png)
 
 ## 🌐 Tampilan Aplikasi Web
 
