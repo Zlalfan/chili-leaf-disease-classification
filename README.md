@@ -10,16 +10,32 @@ Sistem mampu mengklasifikasikan daun cabai ke dalam empat kategori, yaitu Health
 
 ## 📂 Dataset
 
-Dataset yang digunakan pada penelitian ini merupakan dataset citra daun cabai yang terdiri dari empat kelas, yaitu **Healthy**, **Leaf Curl**, **Leaf Spot**, dan **Yellowish Leaf**. Seluruh citra telah melalui tahap prapemrosesan dan dibagi menjadi data pelatihan, validasi, dan pengujian untuk memastikan model mampu melakukan generalisasi dengan baik.
+Dataset yang digunakan dalam proyek ini merupakan dataset citra daun cabai yang terdiri dari empat kelas, yaitu **Healthy**, **Leaf Curl**, **Leaf Spot**, dan **Yellowish Leaf**.
+
+Setiap kelas memiliki **1.000 citra**, sehingga total dataset yang digunakan berjumlah **4.000 citra**.
 
 ### Kelas Dataset
 
-| Kelas | Deskripsi |
-|--------|-----------|
-| Healthy | Daun cabai dalam kondisi sehat |
-| Leaf Curl | Daun cabai yang mengalami penyakit keriting daun |
-| Leaf Spot | Daun cabai yang mengalami penyakit bercak daun |
-| Yellowish Leaf | Daun cabai yang mengalami perubahan warna menjadi kekuningan |
+| Kelas | Jumlah Citra |
+|---|---:|
+| Healthy | 1.000 |
+| Leaf Curl | 1.000 |
+| Leaf Spot | 1.000 |
+| Yellowish Leaf | 1.000 |
+| **Total** | **4.000** |
+
+### Pembagian Dataset
+
+Dataset dibagi menjadi data **training**, **validation**, dan **testing** dengan rasio **70:20:10**.
+
+| Dataset | Persentase | Jumlah |
+|---|---:|---:|
+| Training | 70% | 2.800 |
+| Validation | 20% | 800 |
+| Testing | 10% | 400 |
+| **Total** | **100%** | **4.000** |
+
+Pembagian tersebut diterapkan secara proporsional pada masing-masing kelas, sehingga setiap kelas memiliki 700 citra untuk training, 200 citra untuk validation, dan 100 citra untuk testing.
 
 
 ## 🧠 Arsitektur Model
