@@ -4,6 +4,8 @@ Aplikasi web sederhana untuk mengklasifikasikan kondisi daun cabai ke dalam
 4 kelas: **Healthly Leaf**, **Leaf Curl**, **Leaf Spot**, **Yellowish Leaf**,
 menggunakan model MobileNetV3 (Large/Small) hasil training kamu sendiri.
 
+Bisa didownload lewat file "chili-classifier.rar"
+
 ## Struktur folder
 
 ```
