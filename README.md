@@ -112,15 +112,27 @@ Kelas **Healthy Leaf** memiliki hasil terbaik karena seluruh 100 citra berhasil 
 
 ### MobileNetV3-Large
 
-#### Grafik Akurasi
+#### 1. Grafik Akurasi
+
+Grafik akurasi menunjukkan perkembangan kemampuan model dalam mengklasifikasikan citra selama proses pelatihan. Training accuracy meningkat dari sekitar 94,1% hingga mendekati 100% dan kemudian relatif stabil. Validation accuracy berada pada kisaran 97,5–98,9% dengan nilai tertinggi sekitar 98,9%. Pada akhir pelatihan, validation accuracy berada sekitar 98,4%.
+
+Perbedaan antara training accuracy dan validation accuracy menunjukkan adanya sedikit kecenderungan overfitting. Namun, validation accuracy yang tetap tinggi dan relatif stabil menunjukkan bahwa model memiliki kemampuan generalisasi yang baik.
 
 ![Akurasi MobileNetV3-Large](Training/larger/model_akurasi.png)
 
-#### Grafik Loss
+#### 2. Grafik Loss
+
+Grafik loss menunjukkan perubahan nilai kesalahan model selama proses pelatihan. Training loss mengalami penurunan yang sangat signifikan dari sekitar 0,166 hingga mendekati 0. Validation loss mengalami beberapa fluktuasi selama proses pelatihan, dengan nilai terendah sekitar 0,033. Pada akhir pelatihan, validation loss berada sekitar 0,087.
+
+Hasil tersebut menunjukkan bahwa model mampu mempelajari pola pada data training dengan baik, meskipun terdapat perbedaan antara training loss dan validation loss.
 
 ![Loss MobileNetV3-Large](Training/larger/model_loss.png)
 
-#### Confusion Matrix
+#### 3. Confusion Matrix
+
+Confusion matrix menunjukkan kemampuan model dalam membedakan empat kelas penyakit daun cabai pada data pengujian. Dari 400 citra pengujian, sebanyak 398 citra berhasil diklasifikasikan dengan benar sehingga diperoleh akurasi sebesar 99,5%.
+
+Healthy Leaf dan Leaf Spot berhasil diklasifikasikan dengan benar pada seluruh 100 citra. Kesalahan klasifikasi hanya terjadi pada satu citra Leaf Curl yang diprediksi sebagai Healthy Leaf dan satu citra Yellowish Leaf yang diprediksi sebagai Leaf Spot.
 
 ![Confusion Matrix MobileNetV3-Large](Training/larger/matrix.png)
 
