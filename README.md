@@ -10,6 +10,13 @@ Sistem mampu mengklasifikasikan daun cabai ke dalam empat kategori, yaitu Health
 
 ## 📂 Dataset
 
+### 📌 Sumber Dataset
+
+Dataset pada proyek ini dikompilasi secara mandiri dari berbagai sumber gambar yang tersedia di internet. Seluruh data kemudian dikumpulkan, diseleksi, disusun berdasarkan kelas, dan diproses untuk membentuk dataset klasifikasi penyakit daun cabai.
+Link Dataset: https://universe.roboflow.com/alfanz/daun-cabai-cz4fh
+
+Proses anotasi dan pengelolaan dataset dilakukan menggunakan Roboflow. Dataset terdiri dari empat kelas, yaitu **Healthy, Leaf Curl, Leaf Spot, dan Yellowish Leaf**.
+
 Dataset yang digunakan dalam proyek ini merupakan dataset citra daun cabai yang terdiri dari empat kelas, yaitu **Healthy**, **Leaf Curl**, **Leaf Spot**, dan **Yellowish Leaf**.
 
 Setiap kelas memiliki **1.000 citra**, sehingga total dataset yang digunakan berjumlah **4.000 citra**.
@@ -59,6 +66,7 @@ Model dilatih menggunakan TensorFlow dengan konfigurasi sebagai berikut.
 | Loss Function | Categorical Crossentropy |
 | Framework | TensorFlow |
 | Platform | Google Colab (GPU Tesla T4) |
+
 
 ## 📊 Hasil Pelatihan
 
