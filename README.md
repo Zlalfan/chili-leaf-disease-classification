@@ -74,18 +74,40 @@ Pelatihan dilakukan menggunakan dua varian arsitektur MobileNetV3, yaitu **Mobil
 
 ### MobileNetV3-Small
 
-#### Grafik Akurasi
+#### 1. Grafik Akurasi
+
+Grafik akurasi menunjukkan perubahan tingkat ketepatan model selama proses pelatihan pada data training dan validation.
+
+Pada grafik terlihat bahwa **training accuracy** meningkat dari sekitar 92% pada awal pelatihan hingga mendekati 100%. Sementara itu, **validation accuracy** berada pada kisaran 96–98% dan tetap relatif stabil hingga akhir pelatihan. Perbedaan antara training accuracy dan validation accuracy menunjukkan adanya sedikit kecenderungan overfitting, tetapi model masih mampu mempertahankan performa yang baik pada data validation.
 
 ![Akurasi MobileNetV3-Small](Training/small/model_akurasi.png)
 
-#### Grafik Loss
+#### 2. Grafik Loss
+
+Grafik loss menunjukkan perubahan nilai kesalahan model selama proses pelatihan. Semakin kecil nilai loss, semakin baik kemampuan model dalam mempelajari pola pada data.
+
+Training loss mengalami penurunan yang sangat signifikan dari sekitar 0,22 pada awal pelatihan hingga mendekati 0. Validation loss juga mengalami penurunan secara keseluruhan, meskipun terdapat beberapa fluktuasi selama proses pelatihan. Pada akhir pelatihan, validation loss berada di sekitar 0,09.
+
+Perbedaan antara training loss yang mendekati 0 dan validation loss yang masih lebih tinggi menunjukkan adanya sedikit indikasi overfitting, namun validation loss tetap berada pada nilai yang relatif rendah.
 
 ![Loss MobileNetV3-Small](Training/small/model_loss.png)
 
-#### Confusion Matrix
+#### 3. Confusion Matrix
+
+Confusion matrix digunakan untuk melihat kemampuan model dalam membedakan masing-masing kelas pada data pengujian. Nilai pada diagonal menunjukkan jumlah prediksi yang benar, sedangkan nilai di luar diagonal menunjukkan kesalahan klasifikasi.
+
+Pada data pengujian sebanyak **400 citra**, model berhasil mengklasifikasikan **392 citra dengan benar**, sehingga memperoleh akurasi sebesar **98%**.
+
+| Kelas | Prediksi Benar | Kesalahan |
+|---|---:|---:|
+| Healthy Leaf | 100/100 | 0 |
+| Leaf Curl | 98/100 | 2 |
+| Leaf Spot | 96/100 | 4 |
+| Yellowish Leaf | 98/100 | 2 |
+
+Kelas **Healthy Leaf** memiliki hasil terbaik karena seluruh 100 citra berhasil diklasifikasikan dengan benar. Kesalahan klasifikasi terbanyak terjadi pada **Leaf Spot**, dengan 4 citra yang salah diklasifikasikan.
 
 ![Confusion Matrix MobileNetV3-Small](Training/small/matrix.png)
-
 ---
 
 ### MobileNetV3-Large
