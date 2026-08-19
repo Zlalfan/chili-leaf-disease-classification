@@ -114,25 +114,36 @@ Kelas **Healthy Leaf** memiliki hasil terbaik karena seluruh 100 citra berhasil 
 
 #### 1. Grafik Akurasi
 
-Grafik akurasi menunjukkan perkembangan kemampuan model dalam mengklasifikasikan citra selama proses pelatihan. Training accuracy meningkat dari sekitar 94,1% hingga mendekati 100% dan kemudian relatif stabil. Validation accuracy berada pada kisaran 97,5–98,9% dengan nilai tertinggi sekitar 98,9%. Pada akhir pelatihan, validation accuracy berada sekitar 98,4%.
+Grafik akurasi menunjukkan perubahan tingkat ketepatan model selama proses pelatihan pada data training dan validation.
 
-Perbedaan antara training accuracy dan validation accuracy menunjukkan adanya sedikit kecenderungan overfitting. Namun, validation accuracy yang tetap tinggi dan relatif stabil menunjukkan bahwa model memiliki kemampuan generalisasi yang baik.
+Pada grafik terlihat bahwa **training accuracy** meningkat dari sekitar 94,1% pada awal pelatihan hingga mendekati 100%. Sementara itu, **validation accuracy** berada pada kisaran 97,5–98,9% dan tetap relatif stabil hingga akhir pelatihan. Perbedaan antara training accuracy dan validation accuracy menunjukkan adanya sedikit kecenderungan overfitting, tetapi model masih mampu mempertahankan performa yang baik pada data validation.
 
 ![Akurasi MobileNetV3-Large](Training/larger/model_akurasi.png)
 
 #### 2. Grafik Loss
 
-Grafik loss menunjukkan perubahan nilai kesalahan model selama proses pelatihan. Training loss mengalami penurunan yang sangat signifikan dari sekitar 0,166 hingga mendekati 0. Validation loss mengalami beberapa fluktuasi selama proses pelatihan, dengan nilai terendah sekitar 0,033. Pada akhir pelatihan, validation loss berada sekitar 0,087.
+Grafik loss menunjukkan perubahan nilai kesalahan model selama proses pelatihan. Semakin kecil nilai loss, semakin baik kemampuan model dalam mempelajari pola pada data.
 
-Hasil tersebut menunjukkan bahwa model mampu mempelajari pola pada data training dengan baik, meskipun terdapat perbedaan antara training loss dan validation loss.
+Training loss mengalami penurunan yang sangat signifikan dari sekitar 0,166 pada awal pelatihan hingga mendekati 0. Validation loss juga mengalami penurunan secara keseluruhan, meskipun terdapat beberapa fluktuasi selama proses pelatihan. Pada akhir pelatihan, validation loss berada di sekitar 0,087.
+
+Perbedaan antara training loss yang mendekati 0 dan validation loss yang masih lebih tinggi menunjukkan adanya sedikit indikasi overfitting, namun validation loss tetap berada pada nilai yang relatif rendah.
 
 ![Loss MobileNetV3-Large](Training/larger/model_loss.png)
 
 #### 3. Confusion Matrix
 
-Confusion matrix menunjukkan kemampuan model dalam membedakan empat kelas penyakit daun cabai pada data pengujian. Dari 400 citra pengujian, sebanyak 398 citra berhasil diklasifikasikan dengan benar sehingga diperoleh akurasi sebesar 99,5%.
+Confusion matrix digunakan untuk melihat kemampuan model dalam membedakan masing-masing kelas pada data pengujian. Nilai pada diagonal menunjukkan jumlah prediksi yang benar, sedangkan nilai di luar diagonal menunjukkan kesalahan klasifikasi.
 
-Healthy Leaf dan Leaf Spot berhasil diklasifikasikan dengan benar pada seluruh 100 citra. Kesalahan klasifikasi hanya terjadi pada satu citra Leaf Curl yang diprediksi sebagai Healthy Leaf dan satu citra Yellowish Leaf yang diprediksi sebagai Leaf Spot.
+Pada data pengujian sebanyak **400 citra**, model berhasil mengklasifikasikan **398 citra dengan benar**, sehingga diperoleh akurasi sebesar **99,5%**.
+
+| Kelas | Prediksi Benar | Kesalahan |
+|---|---:|---:|
+| Healthy Leaf | 100/100 | 0 |
+| Leaf Curl | 99/100 | 1 |
+| Leaf Spot | 100/100 | 0 |
+| Yellowish Leaf | 99/100 | 1 |
+
+Kelas **Healthy Leaf** dan **Leaf Spot** memiliki hasil terbaik karena seluruh 100 citra berhasil diklasifikasikan dengan benar. Kesalahan klasifikasi hanya terjadi pada **Leaf Curl** dan **Yellowish Leaf**, masing-masing sebanyak 1 citra.
 
 ![Confusion Matrix MobileNetV3-Large](Training/larger/matrix.png)
 
